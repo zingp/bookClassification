@@ -1,13 +1,13 @@
-from flask import Flask, request
+import json
+import keras
+from flask import Flask
+from flask import request
+import tensorflow as tf
 from src.utils import config
 from src.ML.models import Models
-import json
-import tensorflow as tf
-import keras
 
 # 一下三行没有太大作用， 只是为了保证keras正常使用不报错
 global graph, sess
-
 graph = tf.get_default_graph()
 sess = keras.backend.get_session()
 
